@@ -1,110 +1,425 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kedar Sanjay Jasud | Portfolio</title>
+    <meta name="description" content="Portfolio of Kedar Sanjay Jasud — Computer Science student specializing in Data Science at MIT Academy of Engineering.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#personal-info">Personal Info</a>
-        <a href="#career">Career</a>
-        <a href="#goals">Goals</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#certificates">Certificates</a>
-        <a href="resume.html">Resume</a>
+
+    <!-- ==================== Navigation ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="nav-logo">KJ</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
 
-    <!-- Name and Photo Section -->
-    <div class="header">
-        <img src="certificates/Image.jpg" alt="Kedar Jasud">
-        <h1>Kedar Sanjay Jasud</h1>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/_kedar_7_" target="_blank">
-                <img src="icons/instagram.png" alt="Instagram">
-            </a>
-            <a href="https://www.linkedin.com/in/Kedar Jasud" target="_blank">
-                <img src="icons/linkedin.png" alt="LinkedIn">
-            </a>
-            <a href="mailto:kedarjasud6@gmail.com">
-                <img src="icons/gmail.png" alt="Gmail">
-            </a>
-            <a href="https://github.com/kedar611" target="_blank">
-                <img src="icons/github.png" alt="GitHub" title="GitHub">
-            </a>
+    <!-- ==================== Hero Section ==================== -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content reveal">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Kedar Sanjay Jasud</h1>
+                <div class="hero-title">
+                    <span id="typed-text"></span><span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Aspiring Computer Science student specializing in Data Science, passionate about building interactive web solutions and data-driven applications.
+                </p>
+                <a href="#contact" class="btn-primary hero-cta">Get In Touch</a>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-image">
+                    <img src="certificates/Image.jpg" alt="Kedar Sanjay Jasud">
+                </div>
+            </div>
         </div>
-    </div>
-
-    <!-- Sections with Content -->
-    <section id="home">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Welcome to my portfolio, where I showcase my skills, experience, and projects.</p>
-        <p>This website provides insights into my career journey, technical expertise, and aspirations.</p>
     </section>
 
-    <section id="personal-info">
-        <h2>Personal Information</h2>
-        <p>I am a passionate front-end developer dedicated to building interactive and user-friendly websites.</p>
-        <p>With a strong focus on design aesthetics and usability, I ensure seamless user experiences.</p>
+    <!-- ==================== About Section ==================== -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        I am an aspiring Computer Science student specializing in <strong>Data Science</strong> at 
+                        <strong>MIT Academy of Engineering, Alandi</strong>. I'm passionate about building interactive 
+                        web solutions and data-driven applications that solve real-world problems.
+                    </p>
+                    <p>
+                        My career objective is to become a leading front-end developer and data scientist, creating 
+                        responsive and dynamic web solutions while staying ahead of industry trends. I strive to 
+                        contribute to innovative projects that impact businesses and users positively.
+                    </p>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="stat-card">
+                        <div class="stat-count">4+</div>
+                        <div class="stat-label">Certificates</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-count">2+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-count">8+</div>
+                        <div class="stat-label">Skills</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-count">8.0</div>
+                        <div class="stat-label">GPA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="career">
-        <h2>Career Objectives</h2>
-        <p>My objective is to become a leading front-end developer, creating responsive and dynamic web solutions.</p>
-        <p>I aim to stay ahead of industry trends and continuously enhance my coding skills.</p>
+    <!-- ==================== Skills Section ==================== -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Technical Skills</h2>
+            <div class="skills-category reveal">
+                <h3><i class="fas fa-code"></i> Front-end Development</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag"><i class="fab fa-html5"></i> HTML5</div>
+                    <div class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</div>
+                </div>
+            </div>
+            <div class="skills-category reveal">
+                <h3><i class="fas fa-terminal"></i> Programming Languages</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
+                    <div class="skill-tag"><i class="fas fa-copyright"></i> C</div>
+                </div>
+            </div>
+            <div class="skills-category reveal">
+                <h3><i class="fas fa-database"></i> Databases & Analytics</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag"><i class="fas fa-database"></i> Oracle SQL</div>
+                    <div class="skill-tag"><i class="fas fa-chart-bar"></i> Tableau</div>
+                </div>
+            </div>
+            <div class="skills-category reveal">
+                <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag"><i class="fab fa-github"></i> GitHub</div>
+                    <div class="skill-tag"><i class="fab fa-unity"></i> Unity</div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="goals">
-        <h2>Personal Goals</h2>
-        <p>I strive to contribute to innovative projects that impact businesses and users positively.</p>
-        <p>Staying up-to-date with the latest web technologies is one of my core professional goals.</p>
+    <!-- ==================== Education Section ==================== -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 – 2028</span>
+                        <h3 class="timeline-title">Bachelor of Technology in Computer Science</h3>
+                        <p class="timeline-subtitle">MIT Academy of Engineering, Alandi</p>
+                        <p class="timeline-description">
+                            <strong>Specialization:</strong> Data Science &nbsp;|&nbsp; <strong>GPA:</strong> 8.0 / 10.0
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2012 – 2022</span>
+                        <h3 class="timeline-title">Primary & Secondary Education</h3>
+                        <p class="timeline-subtitle">Tatyasaheb Kore English Academy, Kolhapur</p>
+                        <p class="timeline-description">
+                            <strong>GPA:</strong> 8.0 / 10.0
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>My portfolio includes diverse projects, from responsive web pages to interactive applications.</p>
-        <p>I have built projects using HTML, CSS, Python and frameworks like Unity.</p>
+    <!-- ==================== Projects Section ==================== -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Projects</h2>
+            <div class="project-grid">
+                <div class="project-card reveal">
+                    <div class="project-header">
+                        <i class="fas fa-folder-open project-folder-icon"></i>
+                        <div class="project-links">
+                            <a href="https://edusphere.cloud/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">EduSphere</h3>
+                    <p class="project-description">An E-Commerce Dashboard with dynamic and interactive data visualization elements for educational platforms.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Dashboard</span>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-header">
+                        <i class="fas fa-folder-open project-folder-icon"></i>
+                        <div class="project-links">
+                            <a href="https://kedar611.github.io/Portfolio/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/kedar611/Portfolio" target="_blank" title="Source Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Portfolio Website</h3>
+                    <p class="project-description">A personal portfolio website to showcase skills, projects, and achievements, built with modern web technologies.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <p>I specialize in front-end technologies such as HTML, CSS and Data Analysis tool such as Tableau.</p>
-        <p>My skill set also includes experience with frameworks like Unity.</p>
-        <p>I also specialize in data collection, analysis and interpretation.</p>
+    <!-- ==================== Certificates Section ==================== -->
+    <section id="certificates" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Certificates</h2>
+            <div class="cert-grid">
+                <a href="certificates/Digital 101-30 Hours.pdf" target="_blank" class="cert-card reveal">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <div class="cert-info">
+                        <h4 class="cert-title">Digital 101 — 30 Hours</h4>
+                        <p class="cert-issuer">nasscom</p>
+                        <span class="cert-year">2025</span>
+                    </div>
+                </a>
+                <a href="certificates/Python Essentials 1.pdf" target="_blank" class="cert-card reveal">
+                    <div class="cert-icon"><i class="fab fa-python"></i></div>
+                    <div class="cert-info">
+                        <h4 class="cert-title">Python Essentials 1</h4>
+                        <p class="cert-issuer">Cisco Netacad</p>
+                        <span class="cert-year">2025</span>
+                    </div>
+                </a>
+                <a href="certificates/Python Essentials 2.pdf" target="_blank" class="cert-card reveal">
+                    <div class="cert-icon"><i class="fab fa-python"></i></div>
+                    <div class="cert-info">
+                        <h4 class="cert-title">Python Essentials 2</h4>
+                        <p class="cert-issuer">Cisco Netacad</p>
+                        <span class="cert-year">2025</span>
+                    </div>
+                </a>
+                <a href="certificates/Oracle SQL.pdf" target="_blank" class="cert-card reveal">
+                    <div class="cert-icon"><i class="fas fa-database"></i></div>
+                    <div class="cert-info">
+                        <h4 class="cert-title">Oracle SQL</h4>
+                        <p class="cert-issuer">mygreatlearning</p>
+                        <span class="cert-year">2024</span>
+                    </div>
+                </a>
+            </div>
+        </div>
     </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <p>I hold a degree in Computer Science with a focus on web development and data science.</p>
-        <p>During my studies, I gained hands-on experience in various programming languages and design methodologies.</p>
-    </section>
-    <section id="certificates">
-        <h2>Certificates</h2>
-        <p>Click below to view my certifications:</p>
-        <ul>
-            <li>📜 <a href="certificates/Digital 101-30 Hours.pdf" target="_blank">Digital 101-30 Hours – nasscom (2025)</a></li>
-            <li>📜 <a href="certificates/Python Essentials 1.pdf" target="_blank">Python Essentials 1 – Cisco Netacad (2025)</a></li>
-            <li>📜 <a href="certificates/Python Essentials 2.pdf" target="_blank">Python Essentials 2 – Cisco Netacad (2025)</a></li>
-            <li>📜 <a href="certificates/Oracle SQL.pdf" target="_blank">Oracle SQL – mygreatlearning (2024)</a></li>
-        </ul>
+    <!-- ==================== Resume Section ==================== -->
+    <section id="resume" class="section resume-section">
+        <div class="container">
+            <h2 class="section-title reveal">Resume</h2>
+            <div class="resume-content reveal">
+                <p>Interested in learning more about my experience and skills? Download my complete resume below.</p>
+                <a href="Kedar_Sanjay_Jasud.pdf" download class="btn-primary resume-download">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- Resume Section -->
-    <section id="resume">
-        <h2>Resume</h2>
-        <p>You can view or download my resume below:</p>
-        <a href="Kedar Sanjay Jasud .pdf" download="Kedar Sanjay Jasud.pdf" class="resume-button">Download Resume</a>
+    <!-- ==================== Contact Section ==================== -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Get In Touch</h2>
+            <div class="contact-content">
+                <p class="contact-intro reveal">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of something amazing.
+                </p>
+                <div class="contact-grid">
+                    <a href="mailto:kedarjasud6@gmail.com" class="contact-card reveal">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <h4 class="contact-label">Email</h4>
+                        <p class="contact-value">kedarjasud6@gmail.com</p>
+                    </a>
+                    <a href="tel:+918421343930" class="contact-card reveal">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <h4 class="contact-label">Phone</h4>
+                        <p class="contact-value">+91-8421343930</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/Kedar Jasud/" target="_blank" class="contact-card reveal">
+                        <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <h4 class="contact-label">LinkedIn</h4>
+                        <p class="contact-value">Kedar Jasud</p>
+                    </a>
+                    <a href="https://github.com/kedar611" target="_blank" class="contact-card reveal">
+                        <div class="contact-icon"><i class="fab fa-github"></i></div>
+                        <h4 class="contact-label">GitHub</h4>
+                        <p class="contact-value">kedar611</p>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Sarvesh Barale | Designed with passion</p>
+    <!-- ==================== Footer ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://github.com/kedar611" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/Kedar Jasud/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/_kedar_7_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:kedarjasud6@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer-copyright">&copy; 2025 Kedar Sanjay Jasud. All Rights Reserved.</p>
+        </div>
     </footer>
+
+    <!-- ==================== Back to Top ==================== -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- ==================== JavaScript ==================== -->
+    <script>
+        // ===== Typing Animation =====
+        const textArray = ["Front-end Developer", "Data Science Enthusiast", "CS Student @ MIT AOE", "Python Developer"];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typeDelay = 100;
+        const eraseDelay = 50;
+        const newTextDelay = 2000;
+
+        function type() {
+            const currentText = textArray[textIndex];
+            const typedEl = document.getElementById("typed-text");
+
+            if (isDeleting) {
+                typedEl.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typedEl.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let speed = isDeleting ? eraseDelay : typeDelay;
+
+            if (!isDeleting && charIndex === currentText.length) {
+                speed = newTextDelay;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % textArray.length;
+                speed = 500;
+            }
+
+            setTimeout(type, speed);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(type, 1000);
+        });
+
+        // ===== Hamburger Menu =====
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("navLinks");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-links li a").forEach(link => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navLinks.classList.remove("active");
+            });
+        });
+
+        // ===== Navbar Scroll Effect =====
+        const navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+
+        // ===== Active Nav Link on Scroll =====
+        const sections = document.querySelectorAll("section[id]");
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+            });
+            document.querySelectorAll(".nav-links li a").forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+
+        // ===== Scroll Reveal Animation =====
+        const revealElements = document.querySelectorAll(".reveal");
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ===== Back to Top Button =====
+        const backToTopBtn = document.getElementById("backToTop");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add("visible");
+            } else {
+                backToTopBtn.classList.remove("visible");
+            }
+        });
+
+        backToTopBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
 </body>
 </html>
