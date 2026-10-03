@@ -28,7 +28,7 @@
         }
 
         .resume-page {
-            max-width: 860px;
+            max-width: 900px;
             margin: 40px auto;
             background: var(--bg);
             border-radius: 12px;
@@ -51,8 +51,8 @@
             letter-spacing: 1px;
         }
         .resume-contact {
-            display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
-            font-size: 0.9rem;
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 18px;
+            font-size: 0.88rem;
         }
         .resume-contact a {
             color: var(--accent);
@@ -63,60 +63,71 @@
         .resume-contact a:hover { opacity: 0.8; }
 
         /* Body */
-        .resume-body { padding: 40px 48px 48px; }
+        .resume-body { padding: 36px 48px 48px; }
 
-        .resume-section { margin-bottom: 36px; }
+        .resume-section { margin-bottom: 32px; }
         .resume-section:last-child { margin-bottom: 0; }
 
         .resume-section h2 {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--primary);
             border-bottom: 2px solid var(--accent);
             padding-bottom: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
-        .resume-section p { margin-bottom: 10px; color: var(--text-light); }
+        .resume-section p, .resume-section li { color: var(--text-light); font-size: 0.93rem; }
+        .resume-section > p { margin-bottom: 10px; }
 
         /* Skills grid */
-        .skills-row { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-group { margin-bottom: 12px; }
+        .skill-group-title { font-weight: 600; font-size: 0.9rem; color: var(--primary); margin-bottom: 6px; }
+        .skills-row { display: flex; flex-wrap: wrap; gap: 8px; }
         .skill-chip {
-            display: inline-flex; align-items: center; gap: 6px;
-            padding: 6px 16px;
+            display: inline-flex; align-items: center; gap: 5px;
+            padding: 4px 14px;
             background: rgba(var(--accent-rgb), 0.1);
             border: 1px solid rgba(var(--accent-rgb), 0.2);
             border-radius: 50px;
-            font-size: 0.88rem; font-weight: 500;
+            font-size: 0.82rem; font-weight: 500;
             color: var(--primary);
         }
-        .skill-chip i { color: var(--accent); }
+        .skill-chip i { color: var(--accent); font-size: 0.85rem; }
 
-        /* Education / Project entries */
-        .entry { margin-bottom: 20px; }
+        /* Entries */
+        .entry { margin-bottom: 18px; }
         .entry:last-child { margin-bottom: 0; }
         .entry-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
-        .entry-title { font-weight: 600; font-size: 1.05rem; color: var(--primary); }
-        .entry-date { font-size: 0.88rem; color: var(--accent); font-weight: 600; background: var(--primary); padding: 2px 12px; border-radius: 20px; }
-        .entry-subtitle { font-style: italic; color: var(--text-light); font-size: 0.95rem; margin-top: 2px; }
-        .entry-detail { color: var(--text-light); font-size: 0.92rem; margin-top: 4px; }
+        .entry-title { font-weight: 600; font-size: 1rem; color: var(--primary); }
+        .entry-date { font-size: 0.82rem; color: var(--accent); font-weight: 600; background: var(--primary); padding: 2px 12px; border-radius: 20px; white-space: nowrap; }
+        .entry-subtitle { font-style: italic; color: var(--text-light); font-size: 0.92rem; margin-top: 2px; }
+        .entry-detail { color: var(--text-light); font-size: 0.9rem; margin-top: 4px; line-height: 1.6; }
+        .entry-detail a { color: var(--accent); text-decoration: none; }
+        .entry-detail a:hover { text-decoration: underline; }
+
+        .entry-tech { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+        .entry-tech span {
+            font-size: 0.75rem; padding: 2px 10px; border-radius: 4px;
+            background: var(--primary); color: var(--accent); font-weight: 500;
+        }
 
         /* Certificates */
         .cert-list { list-style: none; }
         .cert-list li {
-            padding: 10px 0; border-bottom: 1px solid var(--border);
+            padding: 8px 0; border-bottom: 1px solid var(--border);
             display: flex; justify-content: space-between; align-items: center;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
         }
         .cert-list li:last-child { border-bottom: none; }
-        .cert-list .cert-name { font-weight: 500; color: var(--primary); }
-        .cert-list .cert-meta { color: var(--text-light); font-size: 0.88rem; }
+        .cert-name { font-weight: 500; color: var(--primary); }
+        .cert-meta { color: var(--text-light); font-size: 0.85rem; }
 
         /* Actions */
         .resume-actions {
-            text-align: center; padding: 24px 48px 36px;
+            text-align: center; padding: 20px 48px 36px;
             display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
         }
         .action-btn {
@@ -124,34 +135,27 @@
             padding: 12px 28px; border-radius: 6px;
             font-weight: 500; font-size: 0.95rem;
             cursor: pointer; transition: all 0.3s; text-decoration: none;
+            border: none; font-family: 'Inter', sans-serif;
         }
-        .btn-print {
-            background: transparent; border: 1.5px solid var(--accent);
-            color: var(--primary);
-        }
+        .btn-print { background: transparent; border: 1.5px solid var(--accent); color: var(--primary); }
         .btn-print:hover { background: rgba(var(--accent-rgb), 0.1); }
-        .btn-download {
-            background: var(--accent); border: 1.5px solid var(--accent);
-            color: var(--primary);
-        }
+        .btn-download { background: var(--accent); border: 1.5px solid var(--accent); color: var(--primary); }
         .btn-download:hover { background: transparent; color: var(--primary); }
-        .btn-back {
-            background: var(--primary); border: 1.5px solid var(--primary);
-            color: var(--accent);
-        }
-        .btn-back:hover { background: transparent; color: var(--primary); border-color: var(--primary); }
+        .btn-back { background: var(--primary); border: 1.5px solid var(--primary); color: var(--accent); }
+        .btn-back:hover { background: transparent; color: var(--primary); }
 
-        /* Print styles */
         @media print {
             body { background: #fff; }
             .resume-page { box-shadow: none; margin: 0; border-radius: 0; }
             .resume-actions { display: none; }
+            .resume-header { padding: 30px; }
+            .resume-body { padding: 20px 30px; }
         }
 
         @media (max-width: 600px) {
-            .resume-header, .resume-body, .resume-actions { padding-left: 24px; padding-right: 24px; }
-            .resume-header h1 { font-size: 1.6rem; }
-            .resume-contact { flex-direction: column; gap: 10px; }
+            .resume-header, .resume-body, .resume-actions { padding-left: 20px; padding-right: 20px; }
+            .resume-header h1 { font-size: 1.5rem; }
+            .resume-contact { flex-direction: column; gap: 8px; }
             .entry-header { flex-direction: column; }
         }
     </style>
@@ -171,26 +175,108 @@
         </div>
     </div>
 
-    <!-- Body -->
     <div class="resume-body">
+
         <!-- Professional Summary -->
         <div class="resume-section">
             <h2>Professional Summary</h2>
-            <p>Aspiring Computer Science student specializing in Data Science at MIT Academy of Engineering. Skilled in HTML, CSS, Python, C, Oracle SQL, and data visualization with Tableau. Passionate about building interactive web solutions and data-driven applications.</p>
+            <p>Third-year B.Tech Data Science student at MIT Academy of Engineering with a strong interest in Artificial Intelligence, Machine Learning, Data Science, and Software Development. Experienced in full-stack web development, AI/ML model building, data analysis, and IoT prototyping. Passionate about converting real-world problems into working software solutions.</p>
         </div>
 
         <!-- Technical Skills -->
         <div class="resume-section">
             <h2>Technical Skills</h2>
-            <div class="skills-row">
-                <span class="skill-chip"><i class="fab fa-html5"></i> HTML5</span>
-                <span class="skill-chip"><i class="fab fa-css3-alt"></i> CSS3</span>
-                <span class="skill-chip"><i class="fab fa-python"></i> Python</span>
-                <span class="skill-chip"><i class="fas fa-code"></i> C</span>
-                <span class="skill-chip"><i class="fas fa-database"></i> Oracle SQL</span>
-                <span class="skill-chip"><i class="fas fa-chart-bar"></i> Tableau</span>
-                <span class="skill-chip"><i class="fab fa-github"></i> GitHub</span>
-                <span class="skill-chip"><i class="fab fa-unity"></i> Unity</span>
+
+            <div class="skill-group">
+                <div class="skill-group-title">Programming Languages</div>
+                <div class="skills-row">
+                    <span class="skill-chip">C++</span>
+                    <span class="skill-chip">Python</span>
+                    <span class="skill-chip">Java</span>
+                    <span class="skill-chip">JavaScript</span>
+                    <span class="skill-chip">TypeScript</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group-title">Web Development</div>
+                <div class="skills-row">
+                    <span class="skill-chip">HTML5</span>
+                    <span class="skill-chip">CSS3</span>
+                    <span class="skill-chip">React</span>
+                    <span class="skill-chip">Vite</span>
+                    <span class="skill-chip">Node.js</span>
+                    <span class="skill-chip">Express.js</span>
+                    <span class="skill-chip">FastAPI</span>
+                    <span class="skill-chip">REST APIs</span>
+                    <span class="skill-chip">Responsive UI</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group-title">AI & Machine Learning</div>
+                <div class="skills-row">
+                    <span class="skill-chip">ML</span>
+                    <span class="skill-chip">ANN / DNN</span>
+                    <span class="skill-chip">LSTM</span>
+                    <span class="skill-chip">Regression</span>
+                    <span class="skill-chip">Classification</span>
+                    <span class="skill-chip">SVM</span>
+                    <span class="skill-chip">Decision Trees</span>
+                    <span class="skill-chip">Random Forests</span>
+                    <span class="skill-chip">KNN</span>
+                    <span class="skill-chip">Naive Bayes</span>
+                    <span class="skill-chip">Clustering</span>
+                    <span class="skill-chip">PCA</span>
+                    <span class="skill-chip">RAG</span>
+                    <span class="skill-chip">AI Agents</span>
+                    <span class="skill-chip">TF-IDF</span>
+                    <span class="skill-chip">LLM Integration</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group-title">Libraries & Frameworks</div>
+                <div class="skills-row">
+                    <span class="skill-chip">NumPy</span>
+                    <span class="skill-chip">Pandas</span>
+                    <span class="skill-chip">scikit-learn</span>
+                    <span class="skill-chip">TensorFlow / Keras</span>
+                    <span class="skill-chip">Matplotlib</span>
+                    <span class="skill-chip">Tableau</span>
+                    <span class="skill-chip">LangChain</span>
+                    <span class="skill-chip">Streamlit</span>
+                    <span class="skill-chip">Jupyter</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group-title">Databases & DevOps</div>
+                <div class="skills-row">
+                    <span class="skill-chip">SQL</span>
+                    <span class="skill-chip">PostgreSQL</span>
+                    <span class="skill-chip">MongoDB</span>
+                    <span class="skill-chip">Firebase</span>
+                    <span class="skill-chip">Redis</span>
+                    <span class="skill-chip">Git</span>
+                    <span class="skill-chip">Docker</span>
+                    <span class="skill-chip">WSL / Linux</span>
+                    <span class="skill-chip">Vercel</span>
+                    <span class="skill-chip">AWS</span>
+                    <span class="skill-chip">WebSockets</span>
+                    <span class="skill-chip">JWT / RBAC</span>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <div class="skill-group-title">CS Fundamentals</div>
+                <div class="skills-row">
+                    <span class="skill-chip">DSA</span>
+                    <span class="skill-chip">OOP</span>
+                    <span class="skill-chip">DBMS</span>
+                    <span class="skill-chip">Operating Systems</span>
+                    <span class="skill-chip">Computer Networks</span>
+                </div>
             </div>
         </div>
 
@@ -199,7 +285,7 @@
             <h2>Education</h2>
             <div class="entry">
                 <div class="entry-header">
-                    <span class="entry-title">Bachelor of Technology in Computer Science (Data Science)</span>
+                    <span class="entry-title">B.Tech in Computer Science (Data Science)</span>
                     <span class="entry-date">2024 – 2028</span>
                 </div>
                 <div class="entry-subtitle">MIT Academy of Engineering, Alandi</div>
@@ -218,17 +304,76 @@
         <!-- Projects -->
         <div class="resume-section">
             <h2>Projects</h2>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Agentic AI Marine Intelligence</span>
+                    <span class="entry-date">SIH</span>
+                </div>
+                <div class="entry-detail">Built for Smart India Hackathon to help fishermen make safer fishing decisions using marine weather, ocean data, satellite imagery, PFZ, GIS, map layers, route guidance, and safety information.</div>
+                <div class="entry-tech">
+                    <span>AI Agents</span><span>GIS</span><span>Marine Data</span><span>Maps</span>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Kochi Metro Intelligence V2</span>
+                </div>
+                <div class="entry-detail">AI-powered metro scheduling and passenger-demand forecasting system with real-time dashboards, WebSocket live updates, and LSTM-based predictions.</div>
+                <div class="entry-tech">
+                    <span>React</span><span>TypeScript</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>TensorFlow</span><span>LSTM</span><span>WebSockets</span>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Disaster-Guard</span>
+                </div>
+                <div class="entry-detail">Disaster-safety web application with interactive maps, safe zones, SOS functionality, alerts, crowd reporting, and integrated chatbot for emergency assistance.</div>
+                <div class="entry-tech">
+                    <span>React</span><span>Node.js</span><span>Firebase</span><span>MongoDB</span><span>Maps</span>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">PDF RAG Q&A Assistant</span>
+                </div>
+                <div class="entry-detail">Intelligent document Q&A system using Retrieval-Augmented Generation. Upload PDFs and get accurate answers using TF-IDF, cosine similarity, and LLM APIs.</div>
+                <div class="entry-tech">
+                    <span>Python</span><span>Streamlit</span><span>LangChain</span><span>RAG</span><span>LLM</span>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Movie Theater Analytics</span>
+                </div>
+                <div class="entry-detail">Data preprocessing, regression and ANN models to predict movie transaction values from real-world theater data.</div>
+                <div class="entry-tech">
+                    <span>Python</span><span>ANN</span><span>Regression</span><span>Pandas</span>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Intelligent Structural Fatigue Detection</span>
+                </div>
+                <div class="entry-detail">IoT prototype using Arduino Uno with ADXL345, SW-420, moisture and temperature/humidity sensors to monitor vibration and structural conditions.</div>
+                <div class="entry-tech">
+                    <span>Arduino</span><span>IoT</span><span>Sensors</span><span>Embedded</span>
+                </div>
+            </div>
+
             <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">EduSphere — E-Commerce Dashboard</span>
                 </div>
-                <div class="entry-detail">Dynamic and interactive dashboard for educational e-commerce platform. <a href="https://edusphere.cloud/" target="_blank" style="color:var(--accent);">View →</a></div>
-            </div>
-            <div class="entry">
-                <div class="entry-header">
-                    <span class="entry-title">Portfolio Website</span>
+                <div class="entry-detail">Dynamic and interactive dashboard for educational platforms. <a href="https://edusphere.cloud/" target="_blank">View →</a></div>
+                <div class="entry-tech">
+                    <span>HTML</span><span>CSS</span><span>Dashboard</span>
                 </div>
-                <div class="entry-detail">Personal portfolio built with HTML, CSS, and JavaScript to showcase skills and projects. <a href="https://kedar611.github.io/Portfolio/" target="_blank" style="color:var(--accent);">View →</a></div>
             </div>
         </div>
 
@@ -236,24 +381,20 @@
         <div class="resume-section">
             <h2>Certificates</h2>
             <ul class="cert-list">
-                <li>
-                    <span class="cert-name">Digital 101 — 30 Hours</span>
-                    <span class="cert-meta">nasscom · 2025</span>
-                </li>
-                <li>
-                    <span class="cert-name">Python Essentials 1</span>
-                    <span class="cert-meta">Cisco Netacad · 2025</span>
-                </li>
-                <li>
-                    <span class="cert-name">Python Essentials 2</span>
-                    <span class="cert-meta">Cisco Netacad · 2025</span>
-                </li>
-                <li>
-                    <span class="cert-name">Oracle SQL</span>
-                    <span class="cert-meta">mygreatlearning · 2024</span>
-                </li>
+                <li><span class="cert-name">Digital 101 — 30 Hours</span><span class="cert-meta">nasscom · 2025</span></li>
+                <li><span class="cert-name">Python Essentials 1</span><span class="cert-meta">Cisco Netacad · 2025</span></li>
+                <li><span class="cert-name">Python Essentials 2</span><span class="cert-meta">Cisco Netacad · 2025</span></li>
+                <li><span class="cert-name">Oracle SQL</span><span class="cert-meta">mygreatlearning · 2024</span></li>
             </ul>
         </div>
+
+        <!-- Additional -->
+        <div class="resume-section">
+            <h2>Additional Experience</h2>
+            <p>Eco-friendly <strong>Bamboo Stool</strong> design in Fusion 360. Algorithmic implementations: linked lists, stacks, queues, hashing, searching, sorting, dynamic programming, greedy algorithms, matrix-chain multiplication, knapsack, CPU scheduling, Banker's algorithm, and graph-based problems.</p>
+            <p style="margin-top: 10px;"><strong>Soft Skills:</strong> Problem solving, debugging, API integration, full-stack development, AI/ML model development, data analysis, deployment, Git-based collaboration, technical documentation, teamwork, presentations.</p>
+        </div>
+
     </div>
 
     <!-- Actions -->

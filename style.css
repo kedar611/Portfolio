@@ -311,6 +311,13 @@ img { max-width: 100%; display: block; }
 .project-links a { color: var(--text-secondary); font-size: 1.1rem; transition: color var(--transition); }
 .project-links a:hover { color: var(--accent); }
 
+.project-badge {
+  display: inline-block; padding: 3px 12px; border-radius: 20px;
+  background: var(--accent); color: var(--primary-dark);
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 .project-title { font-size: 1.25rem; color: var(--primary-dark); margin-bottom: 12px; }
 .project-description { color: var(--text-secondary); font-size: 0.95rem; flex-grow: 1; margin-bottom: 20px; }
 .project-tech { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
